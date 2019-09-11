@@ -18,7 +18,7 @@ export function getInfo() {
 
 export function logout() {
   return request({
-    url: '/v1/user/logout',
+    url: '/v1/user/logout?access_token='+getToken(),
     method: 'post'
   })
 }
