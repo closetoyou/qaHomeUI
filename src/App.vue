@@ -11,4 +11,8 @@
 </script>
 
 <style>
+  html,body,#app {
+    height: 100%;
+    background-color: #FAFAFA;
+  }
 </style>

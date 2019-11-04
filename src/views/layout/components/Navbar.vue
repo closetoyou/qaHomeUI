@@ -5,7 +5,7 @@
     <el-dropdown class="avatar-container" trigger="click">
       <div class="avatar-wrapper">
         <span class="el-dropdown">
-          {{name}}<i class="el-icon-caret-bottom"></i>
+          {{name}}
         </span>
       </div>
       <el-dropdown-menu class="user-dropdown" slot="dropdown">
@@ -55,7 +55,7 @@ export default {
 <style rel="stylesheet/scss" lang="scss" scoped>
 .navbar {
   height: 50px;
-  line-height: 50px;
+  line-height: 40px;
   border-radius: 0px !important;
   .hamburger-container {
     line-height: 58px;
@@ -86,7 +86,7 @@ export default {
       .el-icon-caret-bottom {
         position: absolute;
         right: -20px;
-        top: 20px;
+        top: 15px;
         font-size: 12px;
       }
     }

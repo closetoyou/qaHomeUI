@@ -33,17 +33,33 @@ export const constantRouterMap = [
     }]
   },
   {
+    path: '/test',
+    component: Layout,
+    redirect: '/test/caseManager',
+    name: 'test',
+    meta: {title: '测试管理', icon: 'product'},
+    children: [
+      {
+        path: 'test',
+        name: 'caseManager',
+        component: () => import('@/views/test/caseManager/index'),
+        meta: {title: '用例管理', icon: 'product-list'}
+      }
+    ]
+  },
+  {
     path: '/pms',
     component: Layout,
     redirect: '/pms/product',
     name: 'pms',
     meta: {title: '商品', icon: 'product'},
-    children: [{
-      path: 'product',
-      name: 'product',
-      component: () => import('@/views/pms/product/index'),
-      meta: {title: '商品列表', icon: 'product-list'}
-    },
+    children: [
+      {
+        path: 'product',
+        name: 'product',
+        component: () => import('@/views/pms/product/index'),
+        meta: {title: '商品列表', icon: 'product-list'}
+      },
       {
         path: 'addProduct',
         name: 'addProduct',
