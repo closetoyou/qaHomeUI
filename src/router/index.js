@@ -37,14 +37,20 @@ export const constantRouterMap = [
     component: Layout,
     redirect: '/test/caseManager',
     name: 'test',
-    meta: {title: '测试管理', icon: 'product'},
+    meta: {title: '测试管理', icon: 'test'},
     children: [
       {
-        path: 'test',
+        path: 'caseManager',
         name: 'caseManager',
         component: () => import('@/views/test/caseManager/index'),
-        meta: {title: '用例管理', icon: 'product-list'}
-      }
+        meta: {title: '用例管理', icon: 'test-manager'}
+      },
+      {
+        path: 'casePlan',
+        name: 'casePlan',
+        component: () => import('@/views/test/caseManager/index'),
+        meta: {title: '测试计划', icon: 'test-plan'}
+      },
     ]
   },
   {
